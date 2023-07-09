@@ -47,4 +47,30 @@
   width: 100%;
 }
 
+.filter-btn {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+}
+
+.login {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.filter {
+  display: flex;
+}
+
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
