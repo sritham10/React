@@ -27482,13 +27482,13 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/mapi/restaurants/list/v5?lat=17.869073&lng=83.367792&collection=83639&sortBy=&filters=&type=rcv2&offset=0&carousel=true&third_party_vendor=1");
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.268179&lng=85.8345459&offset=47&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING");
         const json = await data.json();
         console.log(json);
         console.log(data);
         // Optional Chaining
-        setListOfRestraunt(json?.data?.cards[2]?.data?.data?.cards);
-        setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+        setListOfRestraunt(json?.data?.cards?.data?.data);
+        setFilteredRestaurant(json?.data?.cards?.data?.data);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -27594,7 +27594,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../utils/constants");
 const RestaurantCard = (props)=>{
     const { resData } = props;
-    const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, deliveryTime } = resData?.data;
+    const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, deliveryTime } = resData;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
         style: {
